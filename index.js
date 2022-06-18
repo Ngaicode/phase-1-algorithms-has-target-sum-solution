@@ -1,7 +1,15 @@
-function hasTargetSum(array, target) {
-  // Write your algorithm here
-}
+"use strict";
+const hasTargetSum = function (arr, target) {
+  const cuurentNum = new Set();
+  for (const num of arr) {
+    const val = target - num;
 
+    if (cuurentNum.has(val)) return true;
+
+    cuurentNum.add(num);
+  }
+  return false;
+};
 /* 
   Write the Big O time complexity of your function here
 */
